@@ -4,6 +4,7 @@ import type { GastoType } from './components/Gasto';
 import './App.css'
 import ListadoGastos from './components/ListadoGastos'
 import FormularioGasto from './components/FormularioGasto';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -21,19 +22,16 @@ function App() {
   }
 
   return (
-    // <div className="min-vh-100 bg d-flex justify-content-center align-items-center">
-    //   <ListadoGastos />
-    // </div>
-
     <Router>
-      <div className="min-vh-100 bg d-flex justify-content-center align-items-center">
+      <div className="min-vh-100 bg d-flex justify-content-center align-items-start p-5">
         <Routes>
           <Route path="/" element={<ListadoGastos gastos={gastos} />} />
           <Route path="/nuevo" element={<FormularioGasto onAgregar={agregarGasto} />} />
         </Routes>
       </div>
-    </Router>
 
+      <ToastContainer position="top-right" autoClose={3000} />
+    </Router>
   )
 }
 
