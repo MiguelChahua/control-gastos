@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# 💸 Control de Gastos Personales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web desarrollada con **React + TypeScript** para gestionar ingresos y gastos mensuales. Permite agregar, editar y eliminar gastos, y muestra alertas visuales según tu nivel de presupuesto.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📷 Vista previa
 
-## Expanding the ESLint configuration
+![Vista previa](./public/captura.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Funcionalidades principales
+
+- 📥 Agrega gastos con nombre y monto
+- 🔁 Edita y elimina gastos existentes
+- 📊 Calcula saldo y porcentaje de gasto automáticamente
+- 💾 Persistencia en `localStorage` (los datos no se borran al recargar)
+- ✅ Validación de formularios (nombre solo letras, monto válido)
+- 🚫 No permite exceder el presupuesto mensual
+- 📱 Diseño **responsive** con Bootstrap
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- React + TypeScript
+- React Router
+- Bootstrap 5
+- React Toastify
+- LocalStorage (navegador)
+
+---
+
+## 📦 Instalación local
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/MiguelChahua/control-gastos.git
+cd control-gastos
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala las dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. Ejecuta el servidor
+
+npm run dev
+
+La app estará disponible en: http://localhost:5173
+
+---
+
+## Notas adicionales
+
+- El presupuesto por defecto es 1200, pero puedes cambiarlo manualmente en la app.
+- No es necesario registrarse ni iniciar sesión, los datos se guardan localmente.
+- La app es ideal para uso personal o como base para futuros proyectos más completos (por ejemplo, con autenticación o conexión a una base de datos).
+
+---
+
+## Autor
+
+Miguel Ángel Chahua Villanueva
+
+📩 Contacto: miguel.ang.cv95@gmail.com
+🧑‍🧒‍🧒 Linkedin: (https://www.linkedin.com/in/miguel-angel-chahua-villanueva-38579112a/)
